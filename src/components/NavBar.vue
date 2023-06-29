@@ -28,7 +28,11 @@
 //    rout:"/"
 //  }
 const navBar = [
- 
+{
+    id:1,
+    title:"Home",
+    rout:"/"
+  },
   {
     id:2,
     title:"Shop",
