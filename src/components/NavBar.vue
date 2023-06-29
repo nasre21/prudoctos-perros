@@ -7,10 +7,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page">Home</a>
-        </li>
-        <li class="nav-item" v-for='nav in navBar' :key='nav.title'>
+        <!-- <li class="nav-item" v-for='navs in navImg' :key='navs.id'>
+          <router-link :to="navs.rout" class="nav-link active" aria-current="page"><img :src="navs.src1" alt="Image"></router-link>
+        </li> -->
+        <li class="nav-item" v-for='nav in navBar' :key='nav.id'>
           <router-link :to="nav.rout" class="nav-link">{{ nav.title }}</router-link>
         </li>
       </ul>
@@ -21,21 +21,26 @@
 
 <script setup>
 
+
+// const navImg=  {
+//    id:1,
+//    src1:require("@/assets/img/head_screen.png"),
+//    rout:"/"
+//  }
 const navBar = [
+ 
   {
-   
-    src1:require("@/assets/img/head_screen.png"),
-    rout:"/"
-  },
-  {
+    id:2,
     title:"Shop",
     rout:"/shop"
   },
   {
+    id:3,
    title:"About us",
     rout:"/about"
   },
   {
+    id:4,
     title:"Contact",
     rout:"/contact"
   },
