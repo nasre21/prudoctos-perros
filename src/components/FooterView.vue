@@ -10,10 +10,10 @@
     <!-- Left -->
 
     <!-- Right -->
-    <div v-for="icon in icons" :key="icon.id">
-<router-link :to="icon.rout" class="text-reset">
-  <i :class="icon.icon"></i>
-</router-link>
+    <div v-for="icono in icons" :key="icono.id">
+<a :href="icono.rout" class="text-reset">
+  <i :class="icono.icon"></i>
+</a>
     </div>
     <!-- Right -->
   </section>
@@ -41,7 +41,7 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Products
+           About Us
           </h6>
           <p>
             <a href="#!" class="text-reset">Angular</a>
@@ -109,6 +109,7 @@
 </template>
 
 <script setup>
+// iconos
 
 const icons = [{
   name: 'facebook',
@@ -141,5 +142,13 @@ const icons = [{
   rout:'https://es-es.facebook.com'
 }
   ]
+  // copyright
+
+  // const copyright = {
+  //   copy: '© 2021 Copyright: ',
+  //   href: 'https://www.tiendanimal.es/',
+  //   text: 'tiendanimal.es'
+
+  // }
 
 </script>
