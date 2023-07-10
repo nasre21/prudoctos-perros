@@ -5,13 +5,13 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <!-- <li class="nav-item" v-for='navs in navImg' :key='navs.id'>
           <router-link :to="navs.rout" class="nav-link active" aria-current="page"><img :src="navs.src1" alt="Image"></router-link>
         </li> -->
-        <li class="nav-item" v-for='nav in navBar' :key='nav.id'>
-          <router-link :to="nav.rout" class="nav-link">{{ nav.title }}</router-link>
+        <li class="nav-item col-md-6"  v-for='nav in navBar' :key='nav.id'>
+          <router-link :to="nav.rout" class="nav-link nav_title">{{ nav.title }}</router-link>
         </li>
       </ul>
     </div>
@@ -54,5 +54,11 @@ const navBar = [
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+
+.nav_title{
+  font-size: 1rem;
+  font-weight: 700;
+}
 
 </style>
