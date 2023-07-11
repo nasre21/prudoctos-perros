@@ -1,6 +1,6 @@
-<template>
-    <FormContact />
+<template>  
     <NavBar />
+    <FormContact />
     <FootterView />
 </template>
 
