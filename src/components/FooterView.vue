@@ -1,71 +1,48 @@
 <template>
-<footer class="bg-dark text-center text-white">
-  <!-- Grid container -->
-  <div class="container">
-    <!-- Section: Social media -->
-
-    <section class="section_footer">
- 
-      <div class="img_footer">
-      <router-link to="/">
-    <img
-        src="../assets/img/head_screen.png"
-        height="80"
-        alt="MDB Logo"
-        loading="lazy"
-        class="img"
-      />
-  </router-link>
-</div>
-
-<div class="icon_foter">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-
-        <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating " href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating" href="#!" role="button"
-          ><i class="fab fa-github"></i
-        ></a>
-  </div>
-</section>
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(14, 13, 13, 0.2);">
-    © 2023 Copyright:
-    <a class="text-white" href="https://www.tiendanimal.es">Tiendanimal.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
+  <footer class="footer">
+    <p>&copy;<a href="https://www.zooplus.es" target="_blank">2023 zooplus.es</a>All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
 </template>
 
-<script setup>
-
-</script>
-
 <style scoped>
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.25rem;
+    text-align: center;
+  }
 
+  .footer p {
+    margin-bottom: 0; /* Remove default margin for <p> tag */
+  }
 
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.313rem 0.625rem;
+  }
 
-.img_footer .img{
- display: flex;
- justify-content: center;
- padding-top: 1.2;
+  .footer a:hover {
+    color: #eaeaea;
+    background-color: #444; /* Hover background color */
+    border-radius: 5px; /* Add border-radius for rounded look */
+  }
 
-}
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.625rem;
+  }
 
-.icon_foter{
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding-bottom: 4rem;
-}
+  .social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0.625rem;
+    font-size: 1.25rem;
+  }
 </style>
