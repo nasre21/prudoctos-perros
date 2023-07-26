@@ -16,36 +16,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="col">
-        <div class="card">
-          <div class="card-content">
-            <div class="image-container">
-              <img src="@/assets/img/image_2.png" alt="Imagen" class="img-fluid">
-            </div>
-            <div class="text-container">
-              <h5 class="card-title">Comedero Doble Acero Inoxidable</h5>
-              <p class="card-text">10$</p>
-              <button class="btn btn-shop">Comprar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-content">
-            <div class="image-container">
-              <img src="@/assets/img/image_3.png" alt="Imagen" class="img-fluid">
-            </div>
-            <div class="text-container">
-              <h5 class="card-title">Correa Extensible Perro Modern Design</h5>
-              <p class="card-text">12,99$</p>
-              <button class="btn btn-shop">Comprar</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
       
     </div>
   </div>
