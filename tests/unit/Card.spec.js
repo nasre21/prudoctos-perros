@@ -1,8 +1,8 @@
 import { mount } from '@vue/test-utils';
 import Card from '@/components/CardView.vue'; // Replace './Shop' with the correct path to your component
 
-describe('Shop', () => {
-  it('renders correctly', () => {
+describe('testea todo el componente', () => {
+  it('test h3 y props', () => {
     // Sample data to pass to the component
     const dataInfo = {
       data: [
