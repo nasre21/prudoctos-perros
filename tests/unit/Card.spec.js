@@ -6,13 +6,12 @@ describe('testea todo el componente', () => {
     // Sample data to pass to the component
     const dataInfo = {
       data: [
-        { id_product: 1, description: 'Product 1', precio: '10$' },
-        { id_product: 2, description: 'Product 2', precio: '20$' },
+        { id_product: 1, description: 'prueba 1', precio: '10$' },
+        { id_product: 2, description: 'prueba 2', precio: '20$' },
         // Add more sample data as needed
       ],
     };
 
-    // Mount the component with the test data
     const wrapper = mount(Card, {
       props: {
         dataInfo,
