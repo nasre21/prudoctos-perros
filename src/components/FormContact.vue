@@ -14,6 +14,11 @@
       <input type="email" placeholder="Email" id="form4Example2" class="form-control" />
     </div>
 
+    <!-- Pasword input -->
+    <div class="form-outline mb-2">
+      <input type="password" placeholder="Password" id="form4Example2" class="form-control" />
+    </div>
+
     <!-- Message input -->
     <div class="form-outline mb-2">
       <textarea class="form-control" placeholder="Message" id="form4Example3" rows="4"></textarea>

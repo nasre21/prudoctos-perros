@@ -1,68 +1,71 @@
-
 <template>
- <div class="containerr">
-    <div class="heading">
-      <h1>Shop</h1>
-    </div>
-  </div>
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card">
-        <div class="card-content">
-          <div class="image-container">
-            <img src="@/assets/img/image_1.png" alt="Imagen" class="img-fluid">
-          </div>
-          <div class="text-container">
-            <h5 class="card-title">Comedero Acero Inoxidable Antideslizante de Colores</h5>
-            <p class="card-text">4.99$</p>
-            <button class="btn btn-shop">Comprar</button>
+<h3 class="text-center fs-20">Shop</h3>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" v-for="data in dataInfo.data" :key="data.id_product" >
+        <div class="card">
+          <div  class="card-content">
+            <div class="image-container">
+              <img src="@/assets/img/image_1.png" alt="Imagen" class="img-fluid">
+            </div>
+            <div class="text-container">
+              <h5 class="card-title">{{data.description}}</h5>
+              <p class="card-text">{{data.precio}}</p>
+              <button class="btn btn-shop">Comprar</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-content">
-          <div class="image-container">
-            <img src="@/assets/img/image_2.png" alt="Imagen" class="img-fluid">
-          </div>
-          <div class="text-container">
-            <h5 class="card-title">Comedero Doble Acero Inoxidable</h5>
-            <p class="card-text">10$</p>
-            <button class="btn btn-shop">Comprar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <div class="card-content">
-          <div class="image-container">
-            <img src="@/assets/img/image_3.png" alt="Imagen" class="img-fluid">
-          </div>
-          <div class="text-container">
-            <h5 class="card-title">Correa Extensible Perro Modern Design</h5>
-            <p class="card-text">12,99$</p>
-            <button class="btn btn-shop">Comprar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-  
+      <!-- <div class="col">
+        <div class="card">
+          <div class="card-content">
+            <div class="image-container">
+              <img src="@/assets/img/image_2.png" alt="Imagen" class="img-fluid">
+            </div>
+            <div class="text-container">
+              <h5 class="card-title">Comedero Doble Acero Inoxidable</h5>
+              <p class="card-text">10$</p>
+              <button class="btn btn-shop">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-content">
+            <div class="image-container">
+              <img src="@/assets/img/image_3.png" alt="Imagen" class="img-fluid">
+            </div>
+            <div class="text-container">
+              <h5 class="card-title">Correa Extensible Perro Modern Design</h5>
+              <p class="card-text">12,99$</p>
+              <button class="btn btn-shop">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      
+    </div>
+  </div>
 </template>
-  <script setup>
+
+<script setup>
+import { defineProps } from 'vue'
+
+defineProps({
+  dataInfo: Object
+})
+
 
 </script>
-  
-  <style scoped>
-  .container {
-  max-width: 1200px;
+
+<style scoped>
+.container {
+  max-width: 75rem;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 /* Customize your card styles */
@@ -71,10 +74,12 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  height: 100%; /* Aseguramos que todas las tarjetas tengan la misma altura */
 }
 
 .card-content {
-  padding: 20px;
+  padding: 1.25rem;
+  height: 100%; /* Aseguramos que todas las tarjetas tengan la misma altura */
 }
 
 .image-container {
@@ -88,17 +93,17 @@ img {
 
 .text-container {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .card-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .card-text {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .btn-shop {
@@ -107,7 +112,7 @@ img {
   background-color: #ff2600;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -115,8 +120,8 @@ img {
 /* Responsive adjustments */
 @media (max-width: 991px) {
   .row-cols-md-3 .col {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
   }
 }
 
@@ -126,17 +131,4 @@ img {
     max-width: 100%;
   }
 }
-
-.container {
-  text-align: center;
-}
-
-.heading h1 {
-  font-size: 3.3rem;
-  /* Adjust the font size as needed */
-  margin-bottom: 1.3rem;
-  text-align: center;
-}
-  </style>
-  
-
+</style>
