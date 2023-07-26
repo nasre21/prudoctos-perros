@@ -5,7 +5,7 @@
         </div>
         <div class="derecha">
             <h2>¿quienes somos?</h2>
-            <p>Somos la única empresa española de cuidadores de mascota profesionales que ofrece una alternativa personalizada de hospedaje canino, paseos caninos y cuidado de gatos.
+            <p>Somos la única empresa española de cuidadores de mascota profesionales que ofrece una alternativa personalizada de hospedaje canino, paseos caninos y cuidado de perros.
 no nos gustan las jaulas, ofrecemos el calor de un hogar. uno de nuestros cuidadores hospedará a tu mascota en su propio domicilio, ofreciéndole las comodidades, el confort y el calor de su propio hogar durante tu ausencia,  garantizándote un servicio personalizado e integral que incluye entrega y recogida a domicilio.
             </p>
         </div>
