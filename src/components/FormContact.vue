@@ -46,7 +46,7 @@
 
   h2 {
     color: #333;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     padding-bottom: 1rem;
   }
