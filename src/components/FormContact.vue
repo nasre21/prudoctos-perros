@@ -1,37 +1,86 @@
 <template>
-  <form class="container">
+  <form @submit.prevent class="container" method="post">
     <!-- Name input -->
+
+  
+
     <div>
       <h2 class="d-flex justify-content-center">Contact Us</h2>
     </div>
 
+
+     <div class="form-outline  mb-2">
+       <input type="hidden" v-model="id" class="form-control1" />
+      </div>
+
+      
     <div class="form-outline  mb-2">
-      <input placeholder="Name" type="text" id="form4Example1" class="form-control" />
+      <input placeholder="Name" type="text" v-model="name" id="form4Example1" class="form-control" />
     </div>
 
     <!-- Email input -->
     <div class="form-outline mb-2">
-      <input type="email" placeholder="Email" id="form4Example2" class="form-control" />
+      <input type="email" v-model="adress" placeholder="Email" id="form4Example2" class="form-control" />
     </div>
 
-    <!-- Pasword input -->
+    <!-- Phone input -->
     <div class="form-outline mb-2">
-      <input type="password" placeholder="Password" id="form4Example2" class="form-control" />
+      <input type="text" v-model="phone" placeholder="Phone" id="form4Example3" class="form-control" maxlength="9" />
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-2">
+      <input type="password" v-model="password" placeholder="Password" id="form4Example4" class="form-control" />
     </div>
 
     <!-- Message input -->
     <div class="form-outline mb-2">
-      <textarea class="form-control" placeholder="Message" id="form4Example3" rows="4"></textarea>
+      <textarea class="form-control" v-model="message" placeholder="Message" id="form4Example5" rows="4"></textarea>
     </div>
 
     <!-- Submit button -->
-    <button type="submit" class="btn btn-red btn-block">Send</button>
+    <button @click="createUser" type="submit" class="btn btn-red btn-block">Send</button>
   </form>
 </template>
 
 <script setup>
-  // No need to add any JavaScript code for now.
+import { ref } from 'vue';
+import axios from 'axios';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const id = ref('');
+
+const name = ref('');
+const adress = ref('');
+const phone = ref('');
+const password = ref('');
+const message = ref('');
+
+const createUser = async () => {
+  try {
+
+    // Make a POST request to the backend API
+    await axios.post('http://127.0.0.1:5000/user',
+    {
+      id: id.value,
+      name: name.value,
+      adress: adress.value,
+      phone: phone.value,
+      password: password.value,
+      message: message.value,
+    });
+
+    router.push('/');
+} catch (error) {
+  console.log(error);
+}
+}
+
 </script>
+
+
 
 <style scoped>
   /* Custom styles */
